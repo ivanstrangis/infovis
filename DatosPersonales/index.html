@@ -1,15 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>Datos Personales Ivan Strangis</title>
+  <title>Mi relación con Gemini y Claude</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; }
+
+    /* parte negra de arriba */
+    header { background: black; color: white; text-align: center; padding: 60px 20px; }
+    .subtitulo { font-size: 14px; letter-spacing: 2px; text-transform: uppercase; color: #aaa; }
+    h1 { font-size: 48px; margin: 10px 0; }
+    .descripcion { max-width: 700px; margin: 20px auto 0; font-size: 18px; }
+
+    /* colores de cada herramienta */
+    .gemini { color: #2A78D6; }
+    .claude { color: #EB6834; }
+
+    /* contenido */
+    main { max-width: 900px; margin: 0 auto; padding: 20px; }
+  </style>
 </head>
 <body>
-<H1>Uso de Claude y Gemini</H1>
 
-  <H2>Dias Usados por Hora</H2>
-  <object type="image/svg+xml" data="DiasUsadosPorHora.svg"></object>
+  <header>
+    <p class="subtitulo">Trabajo práctico · Visualización de la Información</p>
+    <h1>Mi relación con <span class="gemini">Gemini</span> y <span class="claude">Claude</span></h1>
+    <p class="descripcion">
+      Un análisis del uso de las herramientas de Inteligencia Artificial de Google y Anthropic,
+      horarios de uso y tópicos tratados.
+    </p>
+  </header>
+
+  <main>
+    <!-- gráfico de RAWGraphs -->
+    <h2>¿En qué horarios uso cada herramienta?</h2>
+    <p>Prompts por semana en cada hora del día (horario de Argentina).</p>
+    <object type="image/svg+xml" data="Relojes.svg" width="805" height="600"></object>
+  </main>
 
 </body>
 </html>
