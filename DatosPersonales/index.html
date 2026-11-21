@@ -19,6 +19,7 @@
 
     /* contenido */
     main { max-width: 900px; margin: 0 auto; padding: 20px; }
+    object { width: 100%; max-width: 885px; aspect-ratio: 885 / 440; }
   </style>
 </head>
 <body>
@@ -36,7 +37,19 @@
     <!-- gráfico de RAWGraphs -->
     <h2>¿En qué horarios uso cada herramienta?</h2>
     <p>Prompts por semana en cada hora del día (horario de Argentina).</p>
-    <object type="image/svg+xml" data="Relojes.svg" width="805" height="600"></object>
+    <object type="image/svg+xml" data="Relojes.svg"></object>
+
+    <!-- análisis del gráfico -->
+    <h3>Lectura del gráfico</h3>
+    <ul>
+      <li><strong>9-10 hs:</strong> Consulta de noticias</li>
+      <li><strong>10-12 hs:</strong> Carga más operativa</li>
+      <li><strong>12-16 hs:</strong> Horario pleno de mercado</li>
+      <li><strong>16-19 hs:</strong> Cierre de FCIs</li>
+      <li><strong>19-21 hs:</strong> Uso personal</li>
+      <li><strong>21-00 hs:</strong> Menos pantallas</li>
+      <li><strong>00-9 hs:</strong> Sueño y arranque del día</li>
+    </ul>
   </main>
 
 </body>
