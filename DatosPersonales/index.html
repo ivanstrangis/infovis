@@ -22,6 +22,11 @@
     /* tarjeta gris de cada gráfico */
     section { background: #e6e6e6; border-radius: 8px; padding: 25px; margin: 30px 0; }
     section h2 { margin-top: 0; }
+    /* tarjetas negras (introducción y conclusiones) */
+    .oscura { background: black; color: white; border-radius: 8px; padding: 25px 30px; margin: 30px 0; }
+    .oscura h2 { margin-top: 0; }
+    .columnas { display: flex; gap: 40px; flex-wrap: wrap; }
+    .columnas > div { flex: 1; min-width: 280px; }
     /* el gráfico va en un recuadro blanco */
     .grafico { background: white; padding: 10px; margin: 20px 0; }
     object { width: 100%; max-width: 885px; aspect-ratio: 885 / 440; }
@@ -39,6 +44,13 @@
   </header>
 
   <main>
+
+    <!-- introducción -->
+    <section class="oscura">
+      <h2>Sobre los datos</h2>
+      <p>Descargué mi actividad de <span class="gemini">Gemini</span> con Google Takeout y mis conversaciones de <span class="claude">Claude</span> con la exportación de claude.ai. Cada registro es un prompt mío, con su fecha y hora, el largo del mensaje y la conversación a la que pertenece.</p>
+      <p>Empecé a usar <span class="claude">Claude</span> el 21 de marzo de 2026. Para comparar en igualdad de condiciones uso el período que va del 21 de marzo al 11 de noviembre de 2026. Los horarios son de Argentina.</p>
+    </section>
 
     <!-- 01 gráfico de RAWGraphs -->
     <section>
@@ -110,6 +122,32 @@
         <li><strong class="gemini">Gemini:</strong> ese grupo es el 35 %. Lo que más le consulto son juegos y entretenimiento (30 %), y también auto, dispositivos y vida cotidiana.</li>
         <li><strong>Conclusión:</strong> uso <span class="claude">Claude</span> sobre todo para trabajar y estudiar, y <span class="gemini">Gemini</span> para todo lo demás.</li>
       </ul>
+    </section>
+
+    <!-- hallazgos y limitaciones -->
+    <section class="oscura">
+      <div class="columnas">
+        <div>
+          <h2>Hallazgos</h2>
+          <ul>
+            <li><strong>Horarios:</strong> el uso de las dos herramientas acompaña mi jornada de trabajo, con el pico en el horario de mercado.</li>
+            <li><strong>Evolución:</strong> <span class="gemini">Gemini</span> tuvo su pico en septiembre de 2026 (291 prompts) y <span class="claude">Claude</span> en octubre (221). El de <span class="claude">Claude</span> es más irregular.</li>
+            <li><strong>Largo de los prompts:</strong> con <span class="claude">Claude</span> escribo más: 27 palabras en promedio contra 17 con <span class="gemini">Gemini</span>.</li>
+            <li><strong>Temas:</strong> el 72 % de lo que le pregunto a <span class="claude">Claude</span> es de trabajo y estudio. En <span class="gemini">Gemini</span> es el 35 %, y el resto son juegos, auto, dispositivos y vida cotidiana.</li>
+            <li><strong>En resumen:</strong> <span class="claude">Claude</span> es mi herramienta de trabajo y <span class="gemini">Gemini</span> la de todo lo demás.</li>
+          </ul>
+        </div>
+        <div>
+          <h2>Limitaciones</h2>
+          <ul>
+            <li><strong>Plan pago:</strong> tengo <span class="claude">Claude</span> pago por el trabajo, y eso influye en cuánto y para qué lo uso. Una investigación más profunda debería incluir también el uso de <span class="claude">Claude</span> y <span class="gemini">Gemini</span> Enterprise.</li>
+            <li><strong>Período corto:</strong> las dos herramientas se comparan solo desde el 21 de marzo de 2026. De <span class="gemini">Gemini</span> hay datos desde mayo de 2025.</li>
+            <li><strong>Sin tokens ni tiempo:</strong> las exportaciones no traen esos datos, así que la unidad de medida es el prompt.</li>
+            <li><strong>Días excluidos:</strong> dejé afuera el 24 de marzo de 2026, un día de uso atípico. Noviembre está incompleto (llega hasta el 11).</li>
+            <li><strong>Temas a mano:</strong> clasifiqué cada conversación en un solo tema. Si una conversación cambió de tema, quedó con uno solo.</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
   </main>
