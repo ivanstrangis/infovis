@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width">
   <title>Mi relación con Gemini y Claude</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; }
+    body { font-family: Arial, sans-serif; margin: 0; background: #f2f2f2; }
 
     /* parte negra de arriba */
     header { background: black; color: white; text-align: center; padding: 60px 20px; }
@@ -19,6 +19,11 @@
 
     /* contenido */
     main { max-width: 900px; margin: 0 auto; padding: 20px; }
+    /* tarjeta gris de cada gráfico */
+    section { background: #e6e6e6; border-radius: 8px; padding: 25px; margin: 30px 0; }
+    section h2 { margin-top: 0; }
+    /* el gráfico va en un recuadro blanco */
+    .grafico { background: white; padding: 10px; margin: 20px 0; }
     object { width: 100%; max-width: 885px; aspect-ratio: 885 / 440; }
   </style>
 </head>
@@ -34,37 +39,45 @@
   </header>
 
   <main>
-    <!-- gráfico de RAWGraphs -->
-    <h2>¿En qué horarios uso cada herramienta?</h2>
-    <p>Prompts por semana en cada hora del día (horario de Argentina).</p>
-    <p>Cada reloj tiene su propia escala: el gráfico muestra cómo se reparte el uso en el día, no cuánto uso cada herramienta.</p>
-    <object type="image/svg+xml" data="Relojes.svg"></object>
 
-    <!-- análisis del gráfico -->
-    <h3>Lectura del gráfico</h3>
-    <ul>
-      <li><strong>9-10 hs:</strong> Consulta de noticias</li>
-      <li><strong>10-12 hs:</strong> Carga más operativa</li>
-      <li><strong>12-16 hs:</strong> Horario pleno de mercado</li>
-      <li><strong>16-19 hs:</strong> Cierre de FCIs</li>
-      <li><strong>19-21 hs:</strong> Uso personal</li>
-      <li><strong>21-00 hs:</strong> Menos pantallas</li>
-      <li><strong>00-9 hs:</strong> Sueño y arranque del día</li>
-    </ul>
+    <!-- 01 gráfico de RAWGraphs -->
+    <section>
+      <h2>¿En qué horarios uso cada herramienta?</h2>
+      <p>Prompts por semana en cada hora del día (horario de Argentina).</p>
+      <p>Cada reloj tiene su propia escala: el gráfico muestra cómo se reparte el uso en el día, no cuánto uso cada herramienta.</p>
+      <div class="grafico">
+        <object type="image/svg+xml" data="Relojes.svg"></object>
+      </div>
 
-    <!-- gráfico de Flourish -->
-    <h2>¿Cómo cambió mi uso de cada IA mes a mes?</h2>
-    <p>Prompts por mes. Claude empieza en marzo de 2026, cuando empecé a usarlo.</p>
-    <p>Noviembre de 2026 está incompleto (llega hasta el 11) y no incluye el 24 de marzo de 2026, una sesión de rol con más de 400 prompts en un solo día.</p>
-    <div class="flourish-embed flourish-chart" data-src="visualisation/30989557"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/30989557/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
+      <h3>Lectura del gráfico</h3>
+      <ul>
+        <li><strong>9-10 hs:</strong> Consulta de noticias</li>
+        <li><strong>10-12 hs:</strong> Carga más operativa</li>
+        <li><strong>12-16 hs:</strong> Horario pleno de mercado</li>
+        <li><strong>16-19 hs:</strong> Cierre de FCIs</li>
+        <li><strong>19-21 hs:</strong> Uso personal</li>
+        <li><strong>21-00 hs:</strong> Menos pantallas</li>
+        <li><strong>00-9 hs:</strong> Sueño y arranque del día</li>
+      </ul>
+    </section>
 
-    <!-- análisis del gráfico -->
-    <h3>Lectura del gráfico</h3>
-    <ul>
-      <li><strong>Gemini:</strong> el pico es septiembre de 2026 con 291 prompts.</li>
-      <li><strong>Claude:</strong> el pico es octubre de 2026 con 221 prompts.</li>
-      <li><strong>Evolución:</strong> el uso de Claude es más bajo y más irregular que el de Gemini.</li>
-    </ul>
+    <!-- 02 gráfico de Flourish -->
+    <section>
+      <h2>¿Cómo cambió mi uso de cada IA mes a mes?</h2>
+      <p>Prompts por mes. <span class="claude">Claude</span> empieza en marzo de 2026, cuando empecé a usarlo.</p>
+      <p>Noviembre de 2026 está incompleto (llega hasta el 11) y no incluye el 24 de marzo de 2026, una sesión de rol con más de 400 prompts en un solo día.</p>
+      <div class="grafico">
+        <div class="flourish-embed flourish-chart" data-src="visualisation/30989557"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/30989557/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
+      </div>
+
+      <h3>Lectura del gráfico</h3>
+      <ul>
+        <li><strong class="gemini">Gemini:</strong> el pico es septiembre de 2026 con 291 prompts.</li>
+        <li><strong class="claude">Claude:</strong> el pico es octubre de 2026 con 221 prompts.</li>
+        <li><strong>Evolución:</strong> el uso de <span class="claude">Claude</span> es más bajo y más irregular que el de <span class="gemini">Gemini</span>.</li>
+      </ul>
+    </section>
+
   </main>
 
 </body>
